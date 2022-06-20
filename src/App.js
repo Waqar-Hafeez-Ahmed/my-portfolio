@@ -1,5 +1,6 @@
 import "./App.css";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import styles from "./NavMenu.module.css";
 import NavMenu from "./NavMenu";
 import Home from "./Components/home";
 import About from "./Components/about";
@@ -13,31 +14,33 @@ import LogIn from "./Components/login";
 function App() {
   return (
     <Router>
-      <NavMenu />
-      <Route path="/about">
-        <About />
-      </Route>
-      <Route path="/coaching">
-        <Coaching />
-      </Route>
-      <Route path="/freeguides">
-        <FreeGuides />
-      </Route>
-      <Route path="/newsletter">
-        <Newsletter />
-      </Route>
-      <Route path="/products">
-        <Products />
-      </Route>
-      <Route path="/contact">
-        <Contacts />
-      </Route>
-      <Route path="/login">
-        <LogIn />
-      </Route>
-      <Route path="/">
-        <Home />
-      </Route>
+      <NavMenu className={styles.NavBar} />
+      <Switch>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/coaching">
+          <Coaching />
+        </Route>
+        <Route path="/freeguides">
+          <FreeGuides />
+        </Route>
+        <Route path="/newsletter">
+          <Newsletter />
+        </Route>
+        <Route path="/products">
+          <Products />
+        </Route>
+        <Route path="/contact">
+          <Contacts />
+        </Route>
+        <Route path="/login">
+          <LogIn />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
     </Router>
   );
 }

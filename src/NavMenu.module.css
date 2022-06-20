@@ -1,0 +1,23 @@
+.NavBar {
+  max-width: 1200px;
+  text-align: center;
+  position: fixed;
+  z-index: 100%;
+  padding: 1rem;
+  background-color: aquamarine;
+}
+
+ul {
+  text-align: center;
+  margin: 0 auto;
+}
+
+li {
+  text-align: center;
+  display: inline-block;
+}
+
+a {
+  display: inline-block;
+  padding: auto;
+}
