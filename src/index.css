@@ -1,12 +1,13 @@
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 html {
   font-family: sans-serif;
-  background-color: white;
+  background-color: rgb(51, 49, 49);
 }
 
 body {
-  margin: 0;
+  text-align: center;
 }
